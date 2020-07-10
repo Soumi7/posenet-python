@@ -17,8 +17,8 @@ args = parser.parse_args()
 
 
 def main():
-
-    with tf.compat.v1.Session() as sess:
+    #tf.compat.v1.Session()
+    with tf.Session() as sess:
         model_cfg, model_outputs = posenet.load_model(args.model, sess)
         output_stride = model_cfg['output_stride']
 
